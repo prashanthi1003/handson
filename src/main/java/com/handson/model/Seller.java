@@ -6,6 +6,11 @@ public class Seller {
 
     private String name;
 
+    public Seller(Integer no, String name) {
+        this.no = no;
+        this.name = name;
+    }
+
     public Integer getNo() {
         return no;
     }

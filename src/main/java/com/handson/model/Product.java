@@ -10,13 +10,13 @@ public class Product {
 
     private BigDecimal price;
 
-    private Integer sellerNo;
+    private Seller seller;
 
-    public Product(Integer no, String name, BigDecimal price, Integer sellerNo) {
+    public Product(Integer no, String name, BigDecimal price, Seller seller) {
         this.no = no;
         this.name = name;
         this.price = price;
-        this.sellerNo = sellerNo;
+        this.seller = seller;
     }
 
     public Integer getNo() {
@@ -43,11 +43,11 @@ public class Product {
         this.price = price;
     }
 
-    public Integer getSellerNo() {
-        return sellerNo;
+    public Seller getSeller() {
+        return seller;
     }
 
-    public void setSellerNo(Integer sellerNo) {
-        this.sellerNo = sellerNo;
+    public void setSeller(Seller seller) {
+        this.seller = seller;
     }
 }
