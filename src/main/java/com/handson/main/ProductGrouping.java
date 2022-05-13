@@ -5,7 +5,9 @@ import com.handson.model.Seller;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ProductGrouping {
 
@@ -18,6 +20,25 @@ public class ProductGrouping {
         productList.add(new Product(4, "Xiaomi OCOOKER Dual Side", new BigDecimal(175), new Seller(3, "Xiomi Malaysia")));
 
         // Do grouping and display the products base on its sellerNo
+        Map<String, String> sellerProductMap = new HashMap<>();
+        for(int i=0; i<productList.size(); i++){
+            String seller = productList.get(i).getSeller().getName();
+            System.out.println(seller);
+            for(int j=0; j<productList.size(); j++){
+                if(productList.get(i).getSeller().getName() == seller){
+                    System.out.println(productList.get(i).getName());
+                    break;
+                }
+            }
+            /*if(productList.contains(productList.get(i))){
+                sellerProductMap.put(productList.get(i).getSeller().getName(), productList.get(i).getName());
+                System.out.println(sellerProductMap);
+            }*/
+
+
+        }
+
+
     }
 
 }
